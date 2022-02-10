@@ -1,22 +1,24 @@
 #FROM quay.io/eclipse/che-java8-maven:nightly
-FROM quay.io/strimzi/kafka 
+#FROM quay.io/strimzi/kafka 
 #FROM  quay.io/eclipse/che-java11-maven
 #FROM docker.io/openjdk:8-jre-alpine
 
-MAINTAINER tech-tejendra
+FROM quay.io/eclipse/che-python-3.7
 
-USER root
+MAINTAINER sumit-sethi
 
-COPY src /home/app/src
-COPY pom.xml /home/app
+#USER root
+
+#COPY src /home/app/src
+#COPY pom.xml /home/app
 
 #ERROR
 #RUN nocmd
 
-RUN mkdir -p /var/local/SP
+#RUN mkdir -p /var/local/SP
 
-RUN mvn -f /home/app/pom.xml clean package
+#RUN mvn -f /home/app/pom.xml clean package
 
-EXPOSE 8080
+#EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "/home/app/target/spring-boot-hello-world-0.0.1-SNAPSHOT.jar"]
+#ENTRYPOINT ["java", "-jar", "/home/app/target/spring-boot-hello-world-0.0.1-SNAPSHOT.jar"]
