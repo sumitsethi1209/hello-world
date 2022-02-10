@@ -3,7 +3,7 @@
 #FROM  quay.io/eclipse/che-java11-maven
 #FROM docker.io/openjdk:8-jre-alpine
 
-FROM quay.io/eclipse/che-python-3.7
+FROM quay.io/eclipse/che-python-3.7:latest
 
 MAINTAINER sumit-sethi
 
