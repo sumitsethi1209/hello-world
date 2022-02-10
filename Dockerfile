@@ -1,5 +1,5 @@
-FROM quay.io/eclipse/che-java8-maven:nightly
-
+#FROM quay.io/eclipse/che-java8-maven:nightly
+FROM quay.io/strimzi/kafka 
 #FROM  quay.io/eclipse/che-java11-maven
 #FROM docker.io/openjdk:8-jre-alpine
 
